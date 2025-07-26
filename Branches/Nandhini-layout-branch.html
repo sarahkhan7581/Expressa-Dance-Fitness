@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXPRESSA</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/android.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+            <div class="header-container">
+              <button class="openbtn" onclick="openNav()">☰</button>
+              <div class="txt-containerr">
+                  <span class="txt-head">Expressa</span>
+                  <div class="txt-powered-by">Dance & Fitness Studio</div>
+              </div>
+          </div>
+            <div id="mySidepanel" class="sidepanel">
+              <div><img src="media/logo.png" class="android_menu_logo"></div>
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+              <a href="../index.html" onclick="closeNavOnClick()">HOME</a>
+                <a href="../Template/about.html" onclick="closeNavOnClick()">ABOUT</a>
+                <a href="../Template/classes.html" onclick="closeNavOnClick()">STYLES</a>
+                <a href="../Template/services.html"onclick="closeNavOnClick()">SERVICES</a>
+                <a href="../Template/contact.html" onclick="closeNavOnClick()">CONTACT</a>
+                <a href="../Template/gallery.html" onclick="closeNavOnClick()">GALLERY</a>
+                <a href="#login" id="userIconLink" class="user-icon" onclick="togglePopup(); closeNavOnClick();">LOGIN</a>
+
+          </div>
+
+          <div id="mySidebarNav" class="mySidebarNav">
+            <a href="../index.html" id="homeLink"><span>Home</span> <i class="fas fa-home"></i></a>
+            <a href="../Template/about.html" id="aboutLink"><span>About</span> <i class="fas fa-info-circle"></i></a>
+            <a href="../Template/classes.html" id="stylesLink"><span>Styles</span> <i class="fas fa-child"></i></a>
+            <a href="../Template/services.html" id="servicesLink"><span>Services</span> <i class="fas fa-music"></i></a>
+            <a href="../Template/contact.html" id="contactLink"><span>Contact</span> <i class="fas fa-envelope"></i></a>
+            <a href="../Template/gallery.html" id="galleryLink"><span>Gallery</span> <i class="fas fa-images"></i></a>
+          </div>
+          
+        
+          <!-- Main Navigation -->
+          <nav class="navbar">
+            <div class="logo">
+              <a href="#"></a>
+            </div>
+            <a href="../index.html" class="brand-info">
+              <h1>Expressa</h1>
+              <p>Dance & Fitness Studio</p>
+            </a>
+            <div class="nav-links right">
+              <a href="#login" id="userIconLink" class="user-icon" onclick="togglePopup()"><i class="fas fa-user"></i></a>
+            </div>
+          </nav>
+        
+          <!-- Button to Open Side Panel -->
+          <!-- <button class="openbtn1" onclick="openNav1()">☰</button>  -->
+    </header>
+
+    <section class="video-section">
+        <video autoplay loop muted controlsList="nodownload" id="video-background">
+         <source src="../media/22.mp4" type="video/mp4"> 
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-text">
+            <div class="slide" id="slide1">
+                Step into a world where every move tells a story, and every workout fuels your journey.
+                <a href="../Template/contact.html" class="btn">Enroll Today!</a>
+            </div>
+            <div class="slide" id="slide2">
+                At our academy, we don't just teach dance and fitness; we inspire greatness, one step at a time.
+                <a href="../Template/classes.html" class="btn">Explore Classes</a>
+            </div>
+            <div class="slide" id="slide3">
+                Embark on a journey of passion and progress, where every move is a step towards triumph and growth.
+            </div>
+        </div>
+        <button id="arrowButton" class="arrow-button">&larr;</button>
+         <div id="branchInfo" class="branch-info">
+            <button id="closeButton" class="close-button">&times;</button>
+            <a href="../Branches/Rajajinagar-branch.html" class="branch-button" >
+                <h3>Rajajinagar</h3>
+                <p>123 Main St, Rajajinagar, Bangalore</p>
+            </a>
+            <a href="../Branches/Nandhini-layout-branch.html" class="branch-button">
+                <h3>Nandini Layout</h3>
+                <p>456 Dance Ave, Nandini Layout, Bangalore</p>
+            </a>
+            <a href="../Branches/Koramangala-branch.html" class="branch-button">
+                <h3>Koramangala</h3>
+                <p>789 Fitness Blvd, Koramangala, Bangalore</p>
+            </a>     
+        </div>
+    </section>
+
+    <div class="scroll-container">
+        <div class="animated-text">
+          <h2>Dance Makes Every Moment Count!! Start Feeling Alive With Dance</h2>
+          <p>Step into our vibrant studio, where every movement is a celebration of life and vitality. 
+            Experience the exhilaration of dance and fitness intertwined, enhancing your agility, strength, 
+            and inner harmony. Join our community and ignite your passion for movement, wellness, and
+            self-expression in a journey filled with creativity and joy. Explore the magic of dance with us,
+            where each step brings you closer to a healthier, happier you.</p>
+            <a href="../Template/about.html" class="big-button">Our Purpose</a>
+
+        </div>
+      </div>
+
+<div class="second-fixed-bg">
+    <div class="overlay"></div> 
+    <div class="text-on-image">DANCING IS THE POETRY OF THE FOOT</div> 
+    <div class="text1">Don’t practice until you get it right; practice until you win.</div> 
+    <a href="../Template/contact.html" class="text2" >JOIN TODAY</a> 
+</div>
+
+<div class="dance-scroll-container">
+    <div class="dance-content-container">
+        <div class="dance-text-content">
+            <h2 class="dance-title">A DANCE FULL OF NEW STYLE</h2>
+            <p class="dance-description">Be the center of attraction with your new dance moves and style. Learn Dance from professional crew. Our company provides you with best faculty of dancer.</p>
+        </div>
+        <img class="dance-image" src="../media/img1.jpg">
+    </div>
+</div>
+
+
+<div class="first-fixed-bg">
+    <div class="overlay"></div> 
+    <div class="text-on-image1">GRAB THE OPPORTUNITY</div> 
+    <div class="text11">Discover the magic of dance in every step. Our expert guidance transforms your passion into artistry and brings out the best in you.
+    </div> 
+    <a href="../Template/classes.html" class="text21">LEARN MORE</a> 
+</div>
+
+<div class="popup-overlay" id="popupOverlay">
+    <div class="popup" id="popup">
+        
+        <div class="tab-content active" id="login">
+            <img src="../media/user.png" alt="User Image" class="user-image">
+            <h2 class="head">Login</h2>
+            <form>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="loginEmail" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <!-- <div class="already-account">
+                Don't have an account? <a onclick="openTab(event, 'register')">Sign up</a>
+            </div> -->
+        </div>
+        <div class="tab-content" id="register">
+            <h2 class="head">Register</h2>
+            <form>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="registerEmail" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="registerPassword" placeholder="Password" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="registerConfirmPassword" placeholder="Confirm Password" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" id="registerPhone" placeholder="Phone Number" required>
+                </div>
+                <button type="submit">Register</button>
+            </form>
+            <!-- <div class="already-account">
+                Already registered? <a onclick="openTab(event, 'login')">Login</a>
+            </div> -->
+        </div>
+        <button class="close-button" onclick="togglePopup()">×</button>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+    <section class="dance-styles-section">
+        <div class="container">
+            <h2 class="section-title">Discover Our Dance Styles</h2>
+            <div class="dance-style-grid">
+                <!-- Dance Style Card 1 -->
+                <div class="dance-style-card">
+                    <div class="dance-style-overlay">
+                        <img src="../media/h3.jpg" alt="Dance Style 1">
+                        <div class="overlay-text">
+                            <h3 class="dance-style-title">Western Dance</h3>
+                            <p class="dance-style-description">Express yourself with fluid movements and emotional storytelling.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dance Style Card 2 -->
+                <div class="dance-style-card">
+                    <div class="dance-style-overlay">
+                        <img src="../media/h1.png" alt="Dance Style 2">
+                        <div class="overlay-text">
+                            <h3 class="dance-style-title">Hip Hop</h3>
+                            <p class="dance-style-description">Get groovy with high-energy moves and urban rhythms.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dance Style Card 3 -->
+                <div class="dance-style-card">
+                    <div class="dance-style-overlay">
+                        <img src="../media/bollywood.jpg" alt="Dance Style 3">
+                        <div class="overlay-text">
+                            <h3 class="dance-style-title">Bollywood Fusion</h3>
+                            <p class="dance-style-description">Blend traditional Indian dance with modern flair and drama.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dance Style Card 4 -->
+                <div class="dance-style-card">
+                    <div class="dance-style-overlay">
+                        <img src="../media/b1.jpeg" alt="Dance Style 4">
+                        <div class="overlay-text">
+                            <h3 class="dance-style-title">Ballet & Salsa</h3>
+                            <p class="dance-style-description">Feel the passion and rhythm of Latin dances with salsa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="../Template/classes.html" class="explore-link">Explore More Dance Styles</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section footer-about">
+                <h3>About Us</h3>
+                <ul class="about-list">
+                    <li><a href="../Template/about.html">About Us</a></li>
+                    <li><a href="../Template/classes.html">Dance Styles</a></li>
+                    <li><a href="../Template/services.html">Services</a></li>
+                    <li><a href="../Template/contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <!--  <div class="footer-section dance-styles">
+                <h3>Dance Styles</h3>
+                <ul class="dance-styles-list">
+                    <li><a href="#">Western</a></li>
+                    <li><a href="#">B-boying</a></li>
+                    <li><a href="#">Hip Hop</a></li>
+                    <li><a href="#">Bollywood</a></li>
+                    <li><a href="#">Folk</a></li>
+                </ul>
+           </div> -->
+            
+            <div class="footer-section choreography-info">
+                <h3>Choreography</h3>
+                <ul class="choreography-list">
+                    <li><a href="../Template/services.html">Weddings</a></li>
+                    <li><a href="../Template/services.html">Birthdays</a></li>
+                    <li><a href="../Template/services.html">Events</a></li>
+                    <li><a href="../Template/services.html">Ceremonies</a></li>
+                </ul>
+            </div>
+            
+            <!-- <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <ul class="quick-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div> -->
+
+            <div class="footer-section footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone-alt"></i> +91 1234567890</p>
+                <p><i class="fas fa-envelope"></i> info@xyzdance.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Expressa Dance & Fitness Studio,</p>
+                <p>Nandhini Layout, Bangalore</p> 
+                
+            </div>
+            <div class="footer-section footer-social">
+                <h3>Follow Us</h3>
+                <ul class="social-links">
+                    <li><a href="www.facebook.com"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="www.twitter.com"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="www.linkedin.com"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="www.instagram.com"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="subscribe">
+            <p class="subscribe-offer"></p>
+            
+           
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Expressa Dance & Fitness Studio. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../JS/script.js"></script>
+</body>
+
+</html>
