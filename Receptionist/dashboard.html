@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dance Academy Admin Panel</title>
+    <link rel="stylesheet" href="../Receptionist/CSS/receptionist.css">
+    <link rel="stylesheet" href="../Receptionist/CSS/receptionist_android.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        crossorigin="anonymous">
+</head>
+
+<body id="body-pd">
+    <header class="header" id="header">
+        <div class="header__toggle" id="header-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <a href="../Receptionist/dashboard.html" class="nav__logo">
+            <h1 class="nav__logo-name">EXPRESSA</h1>
+        </a>
+       
+    </header>
+
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav"> 
+                <div class="nav__list">
+                    <a href="../Receptionist/dashboard.html" class="nav__link active">
+                        <i class="fas fa-home nav__icon"></i>
+                        <span class="nav__name">Dashboard</span>
+                    </a>
+                    <a href="../Receptionist/Template/Upload.html" class="nav__link">
+                        <i class="fas fa-upload nav__icon"></i>
+                        <span class="nav__name">Upload Media</span>
+                    </a>
+                    <a href="../Receptionist/Template/enquiry.html" class="nav__link">
+                        <i class="fas fa-envelope nav__icon"></i>
+                        <span class="nav__name">Enquiry</span>
+                        </a>
+                    <a href="../Receptionist/Template/profile.html" class="nav__link">
+                        <i class="fas fa-users nav__icon"></i>
+                        <span class="nav__name">Student Profile</span>
+                    </a>
+                    <a href="../Receptionist/Template/students.html" class="nav__link">
+                        <i class="fas fa-users nav__icon"></i>
+                        <span class="nav__name">Student Record</span>
+                    </a>
+                    <a href="#login" class="nav__link ">
+                        <i class="fas fa-sign-out-alt nav__icon"></i>
+                        <span class="nav__name">Logout</span>
+                    </a>
+            </div>
+        </nav>
+    </div>
+
+    <div id="content">
+        <div class="fixed-header">
+            <h1 class="adm">WELCOME HOST!</h1>
+        </div>
+        <div class="container1">
+            <div class="box primary" id="branch1">
+                <a href="#" style="color: white;">
+                    <h2>Branch 1</h2>
+                    <p>Details</p>
+                </a>
+            </div>
+            <div class="box success" id="branch2">
+                <a href="#" style="color: white;">
+                    <h2>Branch 2</h2>
+                    <p>Details</p>
+                </a>
+            </div>
+            <div class="box danger" id="branch3">
+                <a href="#" style="color: white;">
+                    <h2>Branch 3</h2>
+                    <p>Details</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="upload-section-container" id="upload-section">
+            <div class="upload-section">
+                <form id="uploadForm" enctype="multipart/form-data">
+                    <table>
+                        <tr>
+                            <th>Title</th>
+                            <th>Input</th>
+                            <th>Action</th>
+                        </tr>
+                        <tr>
+                            <td><label for="video-upload">Home Page Video</label></td>
+                            <td><input type="file" id="video-upload" name="homePageVideo" accept="video/*"></td>
+                            <td><button type="submit">Upload</button></td>
+
+                        </tr>
+                        <tr>
+                        <td>Western Dance</td>
+                        <td><input type="file" name="western_dance" accept="image/*"></td>
+                        <td><button type="submit">Upload</button></td>
+                    </tr>
+                    <tr>
+                        <td>Hip Hop</td>
+                        <td><input type="file" name="hip_hop" accept="image/*"></td>
+                        <td><button type="submit">Upload</button></td>
+                    </tr>
+                    <tr>
+                        <td>Bollywood Fusion</td>
+                        <td><input type="file" name="bollywood_fusion" accept="image/*"></td>
+                        <td><button type="submit">Upload</button></td>
+                    </tr>
+                    <tr>
+                        <td>Salsa & Ballet</td>
+                        <td><input type="file" name="salsa_ballet" accept="image/*"></td>
+                        <td><button type="submit">Upload</button></td>
+                    </tr>
+                    
+                </table>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../Receptionist/JS/dashboard.js"></script>
+    <script>
+     const uploadSection = document.getElementById('upload-section');
+
+function showUploadSection() {
+    uploadSection.style.display = 'none'; // Reset display to trigger reflow
+    void uploadSection.offsetWidth; // Trigger reflow
+    uploadSection.classList.remove('fade-in');
+    uploadSection.style.display = 'block';
+    uploadSection.classList.add('fade-in');
+}
+
+document.getElementById('branch1').addEventListener('click', showUploadSection);
+document.getElementById('branch2').addEventListener('click', showUploadSection);
+document.getElementById('branch3').addEventListener('click', showUploadSection);
+
+//SAVE IMAGE IN LOCAL Media 
+document.querySelectorAll('#uploadForm button[type="submit"]').forEach(button => {
+    button.addEventListener('click', async function(e) {
+        e.preventDefault();
+        
+        const fileInput = e.target.closest('tr').querySelector('input[type="file"]');
+        const file = fileInput.files[0];
+        
+        // Remove any existing alert messages
+        let existingMessage = fileInput.nextElementSibling;
+        while (existingMessage && !existingMessage.matches('td')) {
+            if (existingMessage.classList.contains('alert-message')) {
+                existingMessage.remove();
+            }
+            existingMessage = existingMessage.nextElementSibling;
+        }
+        
+        // Create a new alert message element
+        const alertMessage = document.createElement('div');
+        alertMessage.classList.add('alert-message');
+        alertMessage.style.marginTop = '5px';
+        
+        if (file) {
+            try {
+                // Request permission to access the file system
+                const dirHandle = await window.showDirectoryPicker({
+                });
+
+                // Navigate to the media directory on the Desktop, creating it if it doesn't exist
+                let mediaHandle = await dirHandle.getDirectoryHandle('media', { create: true });
+
+                // Create a new file in the media directory
+                const newFileHandle = await mediaHandle.getFileHandle(file.name, { create: true });
+                const writable = await newFileHandle.createWritable();
+                await writable.write(file);
+                await writable.close();
+
+                // Display success message
+                alertMessage.textContent = file.name + ' File Uploaded Successfully';
+                alertMessage.style.color = 'green';
+            } catch (error) {
+                console.error('Error saving file:', error);
+                // Display error message
+                alertMessage.textContent = 'Error saving file. Please check console for details.';
+                alertMessage.style.color = 'red';
+            }
+        } else {
+            // Display message to select a file
+            alertMessage.textContent = 'Please select a file first.';
+            alertMessage.style.color = 'red';
+        }
+        
+        // Insert the alert message below the input field
+        fileInput.parentNode.insertBefore(alertMessage, fileInput.nextSibling);
+        
+        // Remove the alert message and clear the file input after 5 seconds
+        setTimeout(() => {
+            alertMessage.remove();
+            fileInput.value = ''; // Clear the file input
+        }, 5000);
+    });
+});
+
+
+    </script>
+</body>
+
+</html>
