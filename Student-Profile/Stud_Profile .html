@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dance Academy - Student Profile</title>
+    <link rel="stylesheet" href="../Student-Profile/CSS/stud-profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <header>
+            <nav class="top-nav">
+                <div class="top-nav-left">
+                    <a href="Stud_Profile .html" class="brand-info">
+                        <h1>Expressa</h1>
+                        <p>Dance & Fitness Studio</p>
+                    </a>
+                </div>
+                <ul class="top-nav-center">
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="../Template/about.html">ABOUT</a></li>
+                    <li><a href="../Template/classes">STYLES</a></li>
+                    <li><a href="../Template/services">SERVICES</a></li>
+                    <li><a href="../Template/contact">CONTACT</a></li>
+                    <li><a href="../Template/gallery">GALLERY</a></li>
+                </ul>
+                <div class="top-nav-logo">
+                    <img src="../Student-Profile/Media/pic1.png" alt="Logo" class="top-nav-logo-img" id="top-nav-logo-img">
+                    <input type="file" id="logo-input" style="display: none;" accept="image/*"
+                        onchange="updateLogo(event)">
+                </div>
+
+            </nav>
+        </header>
+
+    </header>
+    <nav class="navbar">
+        <img src="../Student-Profile/Media/pic1.png" id="navbar-avatar">
+        <ul class="nav-links">
+            <li><a href="#profile" id="profile-link"><i class="fas fa-user"></i> PROFILE</a></li>
+            <li><a href="#courses" id="courses-link"><i class="fas fa-book-open"></i>COURSE</a></li>
+            <li><a href="#achievements" id="achievements-link"><i class="fas fa-trophy"></i>ACHIEVEMENTS</a></li>
+            <li><a href="#competitions" id="competitions-link"><i class="fas fa-medal"></i>COMPETITIONS</a></li>
+            <li><a href="#payment" id="payment-link"><i class="	fa fa-credit-card"></i>PAYMENT STATUS</a></li>
+            <li><a href="../index.html"><i class="fas fa-sign-out-alt"></i>LOGOUT</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="profile" class="active">
+            <h2>PROFILE</h2>
+            <!-- <button id="edit-avatar-btn" class="edit-photo-btn">Edit Photo</button>
+            <input type="file" id="avatar-input" style="display: none;" accept="image/*"> -->
+            <div class="profile-info">
+                <div class="info-group">
+                    <label for="student-name">Name</label>
+                    <span id="student-name">John Doe</span>
+                </div>
+                <div class="info-group">
+                    <label for="student-id">ID</label>
+                    <span id="student-id">STU123456789</span>
+                </div>
+                <div class="info-group">
+                    <label for="student-gender">Gender</label>
+                    <span id="student-gender">Male</span>
+                </div>
+                <div class="info-group">
+                    <label for="student-dob">Date of Birth</label>
+                    <span id="student-dob">01/01/2000</span>
+                </div>
+                <div class="info-group">
+                    <label for="student-email">Email</label>
+                    <span id="student-email">john.doe@example.com</span>
+                </div>
+                <div class="info-group">
+                    <label for="student-phone">Phone</label>
+                    <span id="student-phone">(123) 456-7890</span>
+                </div>
+                <div class="info-group">
+                    <label for="student-address">Address</label>
+                    <span id="student-address">123 Dance St, City, State, ZIP</span>
+                </div>
+                <div class="info-group">
+                    <label for="student-age">Age</label>
+                    <span id="student-age">24</span>
+                </div>
+                <div class="info-group">
+                    <label for="student-age">Parent/Guardian Name</label>
+                    <span id="student-age">Sagar</span>
+                </div>
+                <div class="info-group">
+                    <label for="student-age">Parent/Guardian Contact Number</label>
+                    <span id="student-age">976195557</span>
+                </div>
+                <div class="info-group">
+                    <label for="years-of-experience">Previous Experience</label>
+                    <span id="years-of-experience">5 Years</span>
+                </div>
+                <div class="info-group">
+                    <label for="previous-schools">Name of School</label>
+                    <span id="previous-schools">XYZ, ABC Dance School</span>
+                </div>
+                <div class="info-group" id="government-id-group">
+                    <label for="government-id">Government ID</label>
+                    <span id="government-id">
+                        <img src="../Student-Profile/Media/aadhaar.jpg" alt="Government ID" style="width: 250px; height: 150px;">
+                    </span>
+                </div>                
+            </div>
+
+            <h2>MEDICAL INFORMATION</h2>
+            <div class="profile-info">
+                <div class="info-group">
+                    <label for="medical-conditions">Medical History</label>
+                    <span id="medical-conditions">Yes</span>
+                </div>
+                <div class="info-group">
+                    <label for="allergies">Description</label>
+                    <span id="allergies">Leg Fracture 2 years back</span>
+                </div>
+                <div class="info-group">
+                    <label for="emergency-contact">Emergency Name</label>
+                    <span id="emergency-contact">Tejaswini</span>
+                </div>
+                <div class="info-group">
+                    <label for="insurance">Emergency Contact</label>
+                    <span id="insurance">(123) 456-7890</span>
+                </div>
+            </div>
+        </section>
+        <section id="courses" class="hidden">
+            <h2>COURSES</h2>
+            <div class="course-info">
+                <div class="info-group">
+                    <label for="dance-style">Course (Dance Style)</label>
+                    <span id="dance-style">Ballet</span>
+                </div>
+                <div class="info-group">
+                    <label for="course-duration">Course Duration</label>
+                    <span id="course-duration">3 months</span>
+                </div>
+                <div class="info-group">
+                    <label for="course-start-date">Course Start-Date</label>
+                    <span id="course-start-date">9/13/2024</span>
+                </div>
+                <div class="info-group">
+                    <label for="course-end-date">Course End-Date</label>
+                    <span id="course-end-date">12/23/2024</span>
+                </div>
+                <div class="info-group">
+                    <label for="course-fees">Course Fees</label>
+                    <span id="course-fees">Rs.10,000</span>
+                </div>
+                <div class="info-group">
+                    <label for="batch-timing">Batch Timing</label>
+                    <span id="batch-timing">6:00 PM - 8:00 PM</span>
+                </div>
+                <div class="info-group">
+                    <label for="branch">Branch</label>
+                    <span id="branch">abc</span>
+                </div>        
+            </div>
+        </section>
+        <section id="achievements" class="hidden">
+            <h2 class="achieve">ACHIEVEMENTS</h2>
+            <div class="achievements-container">
+                <div class="achievement-item">
+                    <div class="txt">
+                        <h3>National Youth Dance Competition 2023</h3>
+                        <p>1st Place - Group Performance</p>
+                    </div>
+                    <img src="../Student-Profile/Media/achievement1.jpg" alt="National Youth Dance Competition Trophy" class="achievement-image">
+                </div>
+                <div class="achievement-item">
+                    <div class="txt">
+                        <h3>Contemporary Dance Workshop</h3>
+                        <p>With Mikhail Baryshnikov, 2022</p>
+                    </div>
+                    <img src="../Student-Profile/Media/achievement2.jpg" alt="Contemporary Dance Workshop Certificate" class="achievement-image">
+                </div>
+                <div class="achievement-item">
+                    <div class="txt">
+                        <h3>The Nutcracker - Lead Role</h3>
+                        <p>Hip Hop, December 2023</p>
+                    </div>
+                    <video controls class="achievement-video">
+                        <source src="../Student-Profile/Media/achievement01.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="achievement-item">
+                    <div class="txt">
+                        <h3>Regional Dance Showcase 2022</h3>
+                        <p>Best Choreography Award</p>
+                    </div>
+                    <video controls class="achievement-video">
+                        <source src="../Student-Profile/Media/competition01.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="achievement-buttons">
+                <button class="edit-achievements-btn">Edit Achievements</button>
+                <button class="add-achievement-btn" style="display: none;">Add New Achievement</button>
+            </div>
+        </section>
+        <section id="competitions" class="hidden">
+            <h2 class="compete">COMPETITIONS</h2>
+            
+            <div class="competitions-container">
+                <div class="competition-item">
+                    <div class="txt">
+                        <h3>International Dance Festival 2023</h3>
+                        <p>2nd Place - Solo Performance</p>
+                    </div>
+                    <img src="../Student-Profile/Media/competition1.jpg" alt="International Dance Festival Trophy" class="competition-image">
+                </div>
+                <div class="competition-item">
+                    <div class="txt">
+                        <h3>City Ballet Championship</h3>
+                        <p>1st Place - Duet Performance</p>
+                    </div>
+                    <img src="../Student-Profile/Media/competition2.jpeg" alt="City Ballet Championship Medal" class="competition-image">
+                </div>
+                <div class="competition-item">
+                    <div class="txt">
+                        <h3>National Hip Hop Battle 2023</h3>
+                        <p>Finalist - Group Performance</p>
+                    </div>
+                    <video controls class="competition-video">
+                        <source src="../Student-Profile/Media/competition01.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="competition-item">
+                    <div class="txt">
+                        <h3>Summer Dance Extravaganza</h3>
+                        <p>Audience Choice Award</p>
+                    </div>
+                    <video controls class="competition-video">
+                        <source src="../Student-Profile/Media/competition02.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="competition-buttons">
+                <button class="edit-competitions-btn">Edit Competitions</button>
+                <button class="add-competition-btn" style="display: none;">Add New Competition</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="../Student-Profile/JS/stud-profile.js"></script>
+</body>
+
+</html>
