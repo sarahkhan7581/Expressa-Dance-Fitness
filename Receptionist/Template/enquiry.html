@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dance Academy Admin Panel</title>
+    <link rel="stylesheet" href="../CSS/receptionist.css">
+    <link rel="stylesheet" href="../CSS/receptionist_android.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        crossorigin="anonymous">
+</head>
+
+<body id="body-pd">
+    <header class="header" id="header">
+        <div class="header__toggle" id="header-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <a href="../dashboard.html" class="nav__logo">
+            <h1 class="nav__logo-name">EXPRESSA</h1>
+        </a>
+       
+    </header>
+
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+            <div>
+               
+                <div class="nav__list">
+                    <a href="../dashboard.html" class="nav__link ">
+                        <i class="fas fa-home nav__icon"></i>
+                        <span class="nav__name">Dashboard</span>
+                    </a>
+                    <a href="../Template/Upload.html" class="nav__link ">
+                        <i class="fas fa-upload nav__icon"></i>
+                        <span class="nav__name">Upload Media</span>
+                    </a>
+                    <a href="../Template/enquiry.html" class="nav__link active" >
+                        <i class="fas fa-envelope nav__icon"></i>
+                        <span class="nav__name">Enquiry</span>
+                        </a>
+                    <a href="../Template/profile.html" class="nav__link " >
+                        <i class="fas fa-users nav__icon"></i>
+                        <span class="nav__name">Student Profile</span>
+                    </a>
+                    <a href="../Template/students.html" class="nav__link">
+                        <i class="fas fa-table nav__icon"></i>
+                        <span class="nav__name">Student Record</span>
+                    </a>
+                    <a href="#login" class="nav__link ">
+                        <i class="fas fa-sign-out-alt nav__icon"></i>
+                        <span class="nav__name">Logout</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div id="content">
+       
+        <main>
+            <h4 class="enq">Enquires List :</h4>
+            
+            <div class="custom-container">
+                <div class="card">
+                    <div class="custom-card-body">
+                        <div class="table-responsive">
+                            <table class="custom-table table-bordered table-hover">
+                                <thead class="thead-light">
+                                <tr>
+                                    <th>SI.No</th>
+                                    <th>Name</th>
+                                    <th>E-mail</th>
+                                    <th>Phone</th>
+                                    <th>WhatsApp</th>
+                                    <th>Gender</th>
+                                    <th>Dance Type</th>
+                                    <th>Other Dance</th>
+                                    <th>Start Date</th>
+                                    <th>Batch Timing</th>
+                                    <th>Comments</th>
+                                    <th>Date (Enquiry)</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>John Doe</td>
+                                    <td>john.doe@example.com</td>
+                                    <td>9876543210</td>
+                                    <td>9876543210</td>
+                                    <td>Male</td>
+                                    <td>Hip Hop</td>
+                                    <td>N/A</td>
+                                    <td>2023-07-20</td>
+                                    <td>Evening 6-8 PM</td>
+                                    <td>Interested in joining your dance classes</td>
+                                    <td id="enquiryDate">2023-07-15</td>
+                                    <td class="action-container" data-enquiry-id="1">
+                                        <button class="btn btn-success accept" data-toggle="tooltip" title="Approve">Approve</button>
+                                    </td>
+                                </tr>
+                                <!-- Additional rows go here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    </div>
+
+    
+
+    <script src="../JS/dashboard.js"></script>
+</body>
+
+</html>

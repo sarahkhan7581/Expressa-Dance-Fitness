@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Records - Dance Academy</title>
+    <link rel="stylesheet" href="../CSS/receptionist.css">
+    <link rel="stylesheet" href="../CSS/receptionist_android.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        crossorigin="anonymous">
+</head>
+
+<body id="body-pd">
+    <header class="header" id="header">
+        <div class="header__toggle" id="header-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <a href="../dashboard.html" class="nav__logo">
+            <h1 class="nav__logo-name">EXPRESSA</h1>
+        </a>
+        
+    </header>
+
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+            <div>
+                
+                <div class="nav__list">
+                    <a href="../dashboard.html" class="nav__link">
+                        <i class="fas fa-home nav__icon"></i>
+                        <span class="nav__name">Dashboard</span>
+                    </a>
+                    <a href="../Template/upload.html" class="nav__link ">
+                        <i class="fas fa-envelope nav__icon"></i>
+                        <span class="nav__name">Upload Media</span>
+                    </a>
+                    <a href="../Template/enquiry.html" class="nav__link">
+                        <i class="fas fa-envelope nav__icon"></i>
+                        <span class="nav__name">Enquiry</span>
+                        </a>
+                    <a href="../Template/profile.html" class="nav__link">
+                        <i class="fas fa-users nav__icon"></i>
+                        <span class="nav__name">Student Profile</span>
+                    </a>
+                    <a href="../Template/students.html" class="nav__link active">
+                        <i class="fas fa-table nav__icon"></i>
+                        <span class="nav__name">Student Record</span>
+                    </a>                  
+                    <a href="#login" class="nav__link ">
+                        <i class="fas fa-sign-out-alt nav__icon"></i>
+                        <span class="nav__name">Logout</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div id="content">
+        <div class="fixed-header">
+            <h1 class="stud">STUDENT RECORDS!</h1>
+        </div>
+        <main>
+            <div class="custom-container">
+                <div class="card">
+                    <div class="custom-card-body">
+                        <div class="table-responsive">
+                            <table class="custom-table table-bordered table-hover">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th>SI.No</th>
+                                        <th>Full Name</th>
+                                        <th>Email</th>
+                                        <th>Phone Number</th>
+                                        <th>Address</th>
+                                        <th>Date of Birth</th>
+                                        <th>Age</th>
+                                        <th>Gender</th>
+                                        <th>Course</th>
+                                        <th>Course Fees</th>
+                                        <th>Course Start Date</th>
+                                        <th>Course End Date</th>
+                                        <th>Course Batch (Timing)</th>
+                                        <th>Medical History</th>
+                                        <th>Emergency Contact Name</th>
+                                        <th>Emergency Contact Number</th>
+                                        <th>Parent/Guardian Name</th>
+                                        <th>Parent/Guardian Number</th>
+                                        <th>Government ID</th>
+                                        <th>Payment Status</th>
+                                        <th>Date (Applied)</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Jane Doe</td>
+                                        <td>jane.doe@example.com</td>
+                                        <td>9123456789</td>
+                                        <td>123 Street, City</td>
+                                        <td>1990-01-01</td>
+                                        <td>33</td>
+                                        <td>Female</td>
+                                        <td>Hip Hop</td>
+                                        <td>₹5000</td>
+                                        <td>2023-01-01</td>
+                                        <td>2023-12-31</td>
+                                        <td>Evening 6-8 PM</td>
+                                        <td>No</td>
+                                        <td>John Doe</td>
+                                        <td>9876543210</td>
+                                        <td>N/A</td>
+                                        <td>N/A</td>
+                                        <td><a href="#">View ID</a></td>
+                                        <td>Paid</td>
+                                        <td>2023-01-01</td>
+                                        <td class="action-container" data-enquiry-id="1">
+                                            <button class="btn btn-success mark-completed">Mark Completed</button>
+                                            <button class="btn btn-danger update">Update</button>  
+                                        </td>
+                                    </tr>
+                                   
+                                    
+                                    <!-- Additional rows go here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+    <script src="../JS/dashboard.js"></script>
+</body>
+
+</html>
