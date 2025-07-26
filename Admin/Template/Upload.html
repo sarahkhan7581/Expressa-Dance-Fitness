@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dance Academy Admin Panel</title>
+    <link rel="stylesheet" href="../CSS/admin.css">
+    <link rel="stylesheet" href="../CSS/admin_android.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        crossorigin="anonymous">
+</head>
+
+<body id="body-pd">
+    <header class="header" id="header">
+        <div class="header__toggle" id="header-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <a href="../dashboard.html" class="nav__logo">
+            <h1 class="nav__logo-name">EXPRESSA</h1>
+        </a>
+
+    </header>
+
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+            <div>
+
+                <div class="nav__list">
+                    <a href="../dashboard.html" class="nav__link ">
+                        <i class="fas fa-home nav__icon"></i>
+                        <span class="nav__name">Dashboard</span>
+                    </a>
+                    <a href="../Template/upload.html" class="nav__link active">
+                        <i class="fas fa-upload nav__icon"></i>
+                        <span class="nav__name">Upload Media</span>
+                    </a>
+                    <a href="../Template/enquiry.html" class="nav__link">
+                        <i class="fas fa-envelope nav__icon"></i>
+                        <span class="nav__name">Enquiry</span>
+                    </a>
+                    <a href="../Template/profile.html" class="nav__link">
+                        <i class="fas fa-users nav__icon"></i>
+                        <span class="nav__name">Student Profile</span>
+                    </a>
+                    <a href="../Template/students.html" class="nav__link">
+                        <i class="fas fa-table nav__icon"></i>
+                        <span class="nav__name">Student Record</span>
+                    </a>
+                    <a href="#login" class="nav__link ">
+                        <i class="fas fa-sign-out-alt nav__icon"></i>
+                        <span class="nav__name">Logout</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+    <div class="content-wrapper">
+
+        <div class="categories-wrapper">
+            <div class="categories-title">CATEGORIES</div>
+            <ul class="categories">
+                <li onclick="showUploadForm('styles')">Styles</li>
+                <li onclick="showUploadForm('services')">Services</li>
+                <li onclick="showUploadForm('contact')">Contact</li>
+                <li onclick="showUploadForm('gallery')">Gallery</li>
+            </ul>
+        </div>
+
+        <div class="upload-forms">
+            <div id="styles" class="upload-form">
+                <h2>STYLES</h2>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Choose File</th>
+                        <th>Upload</th>
+                    </tr>
+                    <tr>
+                        <td>Western Dance</td>
+                        <td><input type="file" name="western_dance" accept="image/*"></td>
+                        <td><button type="submit">Upload</button></td>
+                    </tr>
+                    <tr>
+                        <td>Hip Hop</td>
+                        <td><input type="file" name="hip_hop" accept="image/*"></td>
+                        <td><button type="submit">Upload</button></td>
+                    </tr>
+                    <tr>
+                        <td>Bollywood Fusion</td>
+                        <td><input type="file" name="bollywood_fusion" accept="image/*"></td>
+                        <td><button type="submit">Upload</button></td>
+                    </tr>
+                    <tr>
+                        <td>Salsa & Ballet</td>
+                        <td><input type="file" name="salsa_ballet" accept="image/*"></td>
+                        <td><button type="submit">Upload</button></td>
+                    </tr>
+                    <tr>
+                        <td>Folk</td>
+                        <td><input type="file" name="folk" accept="image/*"></td>
+                        <td><button type="submit">Upload</button></td>
+                    </tr>
+                    <tr>
+                        <td>B-boying</td>
+                        <td><input type="file" name="b_boying" accept="image/*"></td>
+                        <td><button type="submit">Upload</button></td>
+                    </tr>
+                    <tr>
+                        <td>Filmy</td>
+                        <td><input type="file" name="filmy" accept="image/*"></td>
+                        <td><button type="submit">Upload</button></td>
+                    </tr>
+                    <tr>
+                        <td>Free Style</td>
+                        <td><input type="file" name="free_style" accept="image/*"></td>
+                        <td><button type="submit">Upload</button></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="services" class="upload-form">
+                <h2>SERVICES</h2>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Choose File</th>
+                        <th>Upload</th>
+                    </tr>
+                    <tr>
+                        <td>Birthday</td>
+                        <td><input type="file" name="birthday" accept="image/*"></td>
+                        <td><button type="submit">Upload</button></td>
+                    </tr>
+                    <tr>
+                        <td>Wedding</td>
+                        <td><input type="file" name="wedding" accept="image/*"></td>
+                        <td><button type="submit">Upload</button></td>
+                    </tr>
+                    <tr>
+                        <td>Special Events</td>
+                        <td><input type="file" name="special_events" accept="image/*"></td>
+                        <td><button type="submit">Upload</button></td>
+                    </tr>
+                    <tr>
+                        <td>Ceremonial Dances</td>
+                        <td><input type="file" name="ceremonial_dances" accept="image/*"></td>
+                        <td><button type="submit">Upload</button></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="contact" class="upload-form">
+                <h2>CONTACT</h2>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Choose File</th>
+                        <th>Upload</th>
+                    </tr>
+                    <tr>
+                        <td>Contact Photo</td>
+                        <td><input type="file" name="contact" accept="image/*"></td>
+                        <td><button type="submit">Upload</button></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="gallery" class="upload-form gallery">
+                <h2>GALLERY</h2>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Choose File</th>
+                        <th>Upload</th>
+                    </tr>
+                    <tr>
+            <td rowspan="5">Western Dance</td>
+            <td><input type="file" name="western_dance_1" accept="image/*, video/*"></td>
+            <td><button type="submit">Upload</button></td>
+        </tr>
+        <tr>
+            <td><input type="file" name="western_dance_2" accept="image/*, video/*"></td>
+            <td><button type="submit">Upload</button></td>
+        </tr>
+        <tr>
+            <td><input type="file" name="western_dance_3" accept="image/*, video/*"></td>
+            <td><button type="submit">Upload</button></td>
+        </tr>
+        <tr>
+            <td><input type="file" name="western_dance_4" accept="image/*, video/*"></td>
+            <td><button type="submit">Upload</button></td>
+        </tr>
+        <tr>
+            <td><input type="file" name="western_dance_5" accept="image/*, video/*"></td>
+            <td><button type="submit">Upload</button></td>
+        </tr>
+        
+        <tr>
+            <td rowspan="5">B-boying Dance</td>
+            <td><input type="file" name="bboying_dance_1" accept="image/*, video/*"></td>
+            <td><button type="submit">Upload</button></td>
+        </tr>
+        <tr>
+            <td><input type="file" name="bboying_dance_2" accept="image/*, video/*"></td>
+            <td><button type="submit">Upload</button></td>
+        </tr>
+        <tr>
+            <td><input type="file" name="bboying_dance_3" accept="image/*, video/*"></td>
+            <td><button type="submit">Upload</button></td>
+        </tr>
+        <tr>
+            <td><input type="file" name="bboying_dance_4" accept="image/*, video/*"></td>
+            <td><button type="submit">Upload</button></td>
+        </tr>
+        <tr>
+            <td><input type="file" name="bboying_dance_5" accept="image/*, video/*"></td>
+            <td><button type="submit">Upload</button></td>
+        </tr>
+    
+        <tr>
+            <td rowspan="5">Hip Hop Dance</td>
+            <td><input type="file" name="hiphop_dance_1" accept="image/*, video/*"></td>
+            <td><button type="submit">Upload</button></td>
+        </tr>
+        <tr>
+            <td><input type="file" name="hiphop_dance_2" accept="image/*, video/*"></td>
+            <td><button type="submit">Upload</button></td>
+        </tr>
+        <tr>
+            <td><input type="file" name="hiphop_dance_3" accept="image/*, video/*"></td>
+            <td><button type="submit">Upload</button></td>
+        </tr>
+        <tr>
+            <td><input type="file" name="hiphop_dance_4" accept="image/*, video/*"></td>
+            <td><button type="submit">Upload</button></td>
+        </tr>
+        <tr>
+            <td><input type="file" name="hiphop_dance_5" accept="image/*, video/*"></td>
+            <td><button type="submit">Upload</button></td>
+        </tr>
+    
+        <tr>
+            <td rowspan="5">Bollywood Dance</td>
+            <td><input type="file" name="bollywood_dance_1" accept="image/*, video/*"></td>
+            <td><button type="submit">Upload</button></td>
+        </tr>
+        <tr>
+            <td><input type="file" name="bollywood_dance_2" accept="image/*, video/*"></td>
+            <td><button type="submit">Upload</button></td>
+        </tr>
+        <tr>
+            <td><input type="file" name="bollywood_dance_3" accept="image/*, video/*"></td>
+            <td><button type="submit">Upload</button></td>
+        </tr>
+        <tr>
+            <td><input type="file" name="bollywood_dance_4" accept="image/*, video/*"></td>
+            <td><button type="submit">Upload</button></td>
+        </tr>
+        <tr>
+            <td><input type="file" name="bollywood_dance_5" accept="image/*, video/*"></td>
+            <td><button type="submit">Upload</button></td>
+        </tr>
+    
+        <tr>
+            <td rowspan="5">Folk Dance</td>
+            <td><input type="file" name="folk_dance_1" accept="image/*, video/*"></td>
+            <td><button type="submit">Upload</button></td>
+        </tr>
+        <tr>
+            <td><input type="file" name="folk_dance_2" accept="image/*, video/*"></td>
+            <td><button type="submit">Upload</button></td>
+        </tr>
+        <tr>
+            <td><input type="file" name="folk_dance_3" accept="image/*, video/*"></td>
+            <td><button type="submit">Upload</button></td>
+        </tr>
+        <tr>
+            <td><input type="file" name="folk_dance_4" accept="image/*, video/*"></td>
+            <td><button type="submit">Upload</button></td>
+        </tr>
+        <tr>
+            <td><input type="file" name="folk_dance_5" accept="image/*, video/*"></td>
+            <td><button type="submit">Upload</button></td>
+        </tr>
+    </table>
+    
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../JS/admin_dashboard.js">
+
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initially show the 'styles' form
+            showUploadForm('styles');
+        });
+
+        function showUploadForm(id) {
+            // Hide all upload forms
+            var forms = document.querySelectorAll('.upload-form');
+            forms.forEach(form => {
+                form.style.display = 'none';
+            });
+
+            // Show the selected upload form
+            var selectedForm = document.getElementById(id);
+            if (selectedForm) {
+                selectedForm.style.display = 'block';
+            }
+        }
+
+    </script>
+</body>
+
+</html>
