@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXPRESSA</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/android.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="gallery">
+    <header>
+
+        <div class="header-container1">
+            <button class="openbtn" onclick="openNav()">☰</button>
+            <div class="txt-containerr">
+                <span class="txt-head">Expressa</span>
+                <div class="txt-powered-by">Dance & Fitness Studio</div>
+            </div>
+        </div>
+        <div id="mySidepanel" class="sidepanel">
+            <div><img src="media/logo.png" class="android_menu_logo"></div>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="../index.html" onclick="closeNavOnClick()">HOME</a>
+              <a href="../Template/about.html" onclick="closeNavOnClick()">ABOUT</a>
+              <a href="../Template/classes.html" onclick="closeNavOnClick()">STYLES</a>
+              <a href="../Template/services.html"onclick="closeNavOnClick()">SERVICES</a>
+              <a href="../Template/contact.html" onclick="closeNavOnClick()">CONTACT</a>
+              <a href="gallery.html" onclick="closeNavOnClick()">GALLERY</a>
+              <a href="#login" id="userIconLink" class="user-icon" onclick="togglePopup(); closeNavOnClick();">LOGIN</a>
+
+        </div>
+        <div id="mySidebarNav" class="mySidebarNav">
+            <a href="../index.html" id="homeLink"><span>Home</span> <i class="fas fa-home"></i></a>
+            <a href="../Template/about.html" id="aboutLink"><span>About</span> <i class="fas fa-info-circle"></i></a>
+            <a href="../Template/classes.html" id="stylesLink"><span>Styles</span> <i class="fas fa-child"></i></a>
+            <a href="../Template/services.html" id="servicesLink"><span>Services</span> <i class="fas fa-music"></i></a>
+            <a href="../Template/contact.html" id="contactLink"><span>Contact</span> <i class="fas fa-envelope"></i></a>
+            <a href="../Template/gallery.html" id="galleryLink"><span>Gallery</span> <i class="fas fa-images"></i></a>
+          </div>
+        
+          <!-- Main Navigation -->
+          <nav class="navbar">
+            <div class="logo">
+              <a href="#"></a>
+            </div>
+            <a href="../index.html" class="brand-info">
+              <h1>Expressa</h1>
+              <p>Dance & Fitness Studio</p>
+            </a>
+            <div class="nav-links right">
+              <a href="#login" id="userIconLink" class="user-icon" onclick="togglePopup()"><i class="fas fa-user"></i></a>
+            </div>
+          </nav>
+        
+          <!-- Button to Open Side Panel -->
+          <!-- <button class="openbtn1" onclick="openNav1()">☰</button>  -->
+          
+        <div class="header-image-container">
+            <img src="../media/bg11.jpg" alt="Header Image" class="header-image">
+            <div class="header-overlay">
+                <h2>Gallery of Grace!</h2>
+                <p>Discover the elegance and emotion in every captured dance moment.</p>
+            </div>
+        </div>
+    </header>
+
+    <section id="dance-gallery">
+        <!-- Western Dance Images -->
+        <div class="dance-style">
+            <h2>Western Dance</h2>
+            <div class="image-gallery western">
+                <div class="image-container">
+                    <img src="../media/d1.jpg" alt="Western Dance 1">
+                </div>
+                <div class="image-container">
+                    <img src="../media/d2.jpg" alt="Western Dance 2">
+                </div>
+                <div class="image-container">
+                    <img src="../media/d3.jpg" alt="Western Dance 3">
+                </div>
+                <div class="image-container">
+                    <img src="../media/d4.jpg" alt="Western Dance 4">
+                </div>
+                <div class="image-container">
+                    <img src="../media/d5.jpg" alt="Western Dance 5">
+                </div>    
+                            
+            </div>
+        </div>
+
+        <!-- B-boying Dance Images -->
+        <div class="dance-style">
+            <h2>B-boying Dance</h2>
+            <div class="image-gallery bboying">
+                <div class="image-container">
+                    <img src="../media/d6.jpg" alt="B-boying Dance 1">
+                </div>
+                <div class="image-container">
+                    <img src="../media/d7.jpg" alt="B-boying Dance 2">
+                </div>
+                <div class="image-container">
+                    <img src="../media/d8.jpg" alt="B-boying Dance 3">
+                </div>
+                <div class="image-container">
+                    <img src="../media/d9.jpg" alt="B-boying Dance 4">
+                </div>
+                <div class="image-container">
+                    <img src="../media/d10.jpg" alt="B-boying Dance 5">
+                </div>
+            </div>
+        </div>
+
+        <!-- Hip Hop Dance Images -->
+        <div class="dance-style">
+            <h2>Hip Hop Dance</h2>
+            <div class="image-gallery hiphop">
+                <div class="image-container">
+                    <img src="../media/freestyle.jpg" alt="Hip Hop Dance 1">
+                </div>
+                <div class="image-container">
+                    <img src="../media/d12.jpg" alt="Hip Hop Dance 2">
+                </div>
+                <div class="image-container">
+                    <img src="../media/d13.jpg" alt="Hip Hop Dance 3">
+                </div>
+                <div class="image-container">
+                    <img src="../media/d16.jpg" alt="Hip Hop Dance 4">
+                </div>
+                <div class="image-container">
+                    <img src="../media/d15.jpeg" alt="Hip Hop Dance 5">
+                </div>
+            </div>
+        </div>
+
+        <!-- Bollywood Dance Images -->
+        <div class="dance-style">
+            <h2>Bollywood Dance</h2>
+            <div class="image-gallery bollywood">
+                <div class="image-container">
+                    <img src="../media/d18.jpg" alt="Bollywood Dance 1">
+                </div>
+                <div class="image-container">
+                    <img src="../media/d19.jpg" alt="Bollywood Dance 2">
+                </div>
+                <div class="image-container">
+                    <img src="../media/d20.jpg" alt="Bollywood Dance 3">
+                </div>
+                <div class="image-container">
+                    <img src="../media/d21.jpg" alt="Bollywood Dance 4">
+                </div>
+                <div class="image-container">
+                    <img src="../media/d22.jpeg" alt="Bollywood Dance 5">
+                </div>
+            </div>
+        </div>
+
+        <!-- Folk Dance Images -->
+        <div class="dance-style">
+            <h2>Folk Dance</h2>
+            <div class="image-gallery folk">
+                <div class="image-container">
+                    <img src="../media/d23.jpg" alt="Folk Dance 1">
+                </div>
+                <div class="image-container">
+                    <img src="../media/d24.jpg" alt="Folk Dance 2">
+                </div>
+                <div class="image-container">
+                    <img src="../media/d25.jpg" alt="Folk Dance 3">
+                </div>
+                <div class="image-container">
+                    <img src="../media/d26.jpg" alt="Folk Dance 4">
+                </div>
+                <div class="image-container">
+                    <img src="../media/d27.jpg" alt="Folk Dance 5">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<div class="popup-overlay" id="popupOverlay">
+    <div class="popup" id="popup">
+        
+        <div class="tab-content active" id="login">
+            <img src="../media/user.png" alt="User Image" class="user-image">
+            <h2 class="head">Login</h2>
+            <form>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="loginEmail" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <!-- <div class="already-account">
+                Don't have an account? <a onclick="openTab(event, 'register')">Sign up</a>
+            </div> -->
+        </div>
+        <div class="tab-content" id="register">
+            <h2 class="head">Register</h2>
+            <form>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="registerEmail" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="registerPassword" placeholder="Password" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="registerConfirmPassword" placeholder="Confirm Password" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" id="registerPhone" placeholder="Phone Number" required>
+                </div>
+                <button type="submit">Register</button>
+            </form>
+            <!-- <div class="already-account">
+                Already registered? <a onclick="openTab(event, 'login')">Login</a>
+            </div> -->
+        </div>
+        <button class="close-button" onclick="togglePopup()">×</button>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section footer-about">
+            <h3>About Us</h3>
+            <ul class="about-list">
+                <li><a href="../Template/about.html">About Us</a></li>
+                <li><a href="../Template/classes.html">Dance Styles</a></li>
+                <li><a href="../Template/services.html">Services</a></li>
+                <li><a href="../Template/contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <!--  <div class="footer-section dance-styles">
+            <h3>Dance Styles</h3>
+            <ul class="dance-styles-list">
+                <li><a href="#">Western</a></li>
+                <li><a href="#">B-boying</a></li>
+                <li><a href="#">Hip Hop</a></li>
+                <li><a href="#">Bollywood</a></li>
+                <li><a href="#">Folk</a></li>
+            </ul>
+       </div> -->
+        
+        <div class="footer-section choreography-info">
+            <h3>Choreography</h3>
+            <ul class="choreography-list">
+                <li><a href="../Template/services.html">Weddings</a></li>
+                <li><a href="../Template/services.html">Birthdays</a></li>
+                <li><a href="../Template/services.html">Events</a></li>
+                <li><a href="../Template/services.html">Ceremonies</a></li>
+            </ul>
+        </div>
+        
+        <!-- <div class="footer-section quick-links">
+            <h3>Quick Links</h3>
+            <ul class="quick-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+            </ul>
+        </div> -->
+
+        <div class="footer-section footer-contact">
+            <h3>Contact Us</h3>
+            <p><i class="fas fa-phone-alt"></i> +91 1234567890</p>
+            <p><i class="fas fa-envelope"></i> info@xyz.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> Expressa Dance & Fitness Studio,</p>
+            <p>Nandini Layout, India</p> 
+            
+        </div>
+        <div class="footer-section footer-social">
+            <h3>Follow Us</h3>
+            <ul class="social-links">
+                <li><a href="www.facebook.com"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="www.twitter.com"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="www.linkedin.com"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="www.instagram.com"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="subscribe">
+               
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Expressa Dance & Fitness Studio. All Rights Reserved.</p>
+    </div>
+</footer>
+
+    <script src="../JS/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXPRESSA</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/android.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    
+</head>
+
+<body class="contact-formm">
+    <header>
+
+        <div class="header-container">
+            <button class="openbtn" onclick="openNav()">☰</button>
+            <div class="txt-containerr">
+                <span class="txt-head">Expressa</span>
+                <div class="txt-powered-by">Dance & Fitness Studio</div>
+            </div>
+        </div>
+        <div id="mySidepanel" class="sidepanel">
+            <div><img src="media/logo.png" class="android_menu_logo"></div>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="../index.html" onclick="closeNavOnClick()">HOME</a>
+              <a href="../Template/about.html" onclick="closeNavOnClick()">ABOUT</a>
+              <a href="../Template/classes.html" onclick="closeNavOnClick()">STYLES</a>
+              <a href="../Template/services.html"onclick="closeNavOnClick()">SERVICES</a>
+              <a href="contact.html" onclick="closeNavOnClick()">CONTACT</a>
+              <a href="../Template/gallery.html" onclick="closeNavOnClick()">GALLERY</a>
+              <a href="#login" id="userIconLink" class="user-icon" onclick="togglePopup(); closeNavOnClick();">LOGIN</a>
+
+        </div>
+        <div id="mySidebarNav" class="mySidebarNav">
+            <a href="../index.html" id="homeLink"><span>Home</span> <i class="fas fa-home"></i></a>
+            <a href="../Template/about.html" id="aboutLink"><span>About</span> <i class="fas fa-info-circle"></i></a>
+            <a href="../Template/classes.html" id="stylesLink"><span>Styles</span> <i class="fas fa-child"></i></a>
+            <a href="../Template/services.html" id="servicesLink"><span>Services</span> <i class="fas fa-music"></i></a>
+            <a href="../Template/contact.html" id="contactLink"><span>Contact</span> <i class="fas fa-envelope"></i></a>
+            <a href="../Template/gallery.html" id="galleryLink"><span>Gallery</span> <i class="fas fa-images"></i></a>
+          </div>
+        
+          <!-- Main Navigation -->
+          <nav class="navbar">
+            <div class="logo">
+              <a href="#"></a>
+            </div>
+            <a href="../index.html" class="brand-info">
+              <h1>Expressa</h1>
+              <p>Dance & Fitness Studio</p>
+            </a>
+            <div class="nav-links right">
+              <a href="#login" id="userIconLink" class="user-icon" onclick="togglePopup()"><i class="fas fa-user"></i></a>
+            </div>
+          </nav>
+        
+          <!-- Button to Open Side Panel -->
+          <!-- <button class="openbtn1" onclick="openNav1()">☰</button>  -->
+          
+        <div class="header-image-container">
+            <img src="../media/bg11.jpg" alt="Header Image" class="header-image">
+            <div class="header-overlay">
+                <h2>Let's Dance Together!</h2>
+                <p>Reach out to us for any inquiries, class schedules, or to join our vibrant dance community.</p>
+            </div>
+        </div>       
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <div class="contact-form-container">
+                <img src="../media/cc.jpg" alt="Contact Image">
+                <div class="contact-content">
+                    <h2 class="cont">Enquiry</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group" style="display: flex; align-items: center;">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+                        </div>
+                        <div class="form-group" style="display: flex; align-items: center;">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="email" name="email" placeholder="Enter Your E-mail" required>
+                        </div>
+                        <div class="form-group" style="display: flex; align-items: center;">
+                            <i class="fas fa-phone"></i>
+                            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Enter 10-digit phone number" required>
+                        </div>
+                        <div class="form-group" style="display: flex; align-items: center; ">
+                            <i class="fab fa-whatsapp" style="width: 3.5%; font-weight: bolder;"></i>
+                            <input type="text" id="whatsapp" name="whatsapp" placeholder="Enter Your WhatsApp Number" required>
+                        </div>
+                        
+                        <div class="form-group" style="display: flex; align-items: center; ">
+                            <i class="fas fa-venus-mars"></i>
+                            <div class="radio-item" style="margin-left: 5%; padding-right: 30px;">
+                                <input type="radio" id="male" name="gender" value="male" required>
+                                <label for="male">Male</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="female" name="gender" value="female" required>
+                                <label for="female">Female</label>
+                            </div>
+                        </div>
+                        <div class="form-group" style="display: flex; align-items: center;">
+                            <i class="fas fa-music"></i>
+                            <input type="radio" id="salsa" name="danceType" value="salsa">
+                            <label for="salsa">Salsa</label>
+                            <input type="radio" id="hiphop" name="danceType" value="hiphop">
+                            <label for="hiphop">Hip Hop</label>
+                            <input type="radio" id="western" name="danceType" value="western">
+                            <label for="western">Western</label>
+                            <input type="radio" id="bollywood" name="danceType" value="bollywood">
+                            <label for="bollywood">Bollywood</label>
+                           
+                        </div>
+                        <div class="form-group" style="display: flex; align-items: center; margin-left: 11.5%;"> <label for="text">Other (if any)</label>
+                            <input type="text" id="otherDance" name="otherDance" placeholder="Enter Other Dance Type" style="width: 250px;"></div>
+                        <div class="form-group" style="display: flex; align-items: center;">
+                            <i class="fas fa-calendar-alt"></i>
+                            <input type="date" id="startDate" name="startDate" required>
+                        </div>
+                        <div class="form-group" style="display: flex; align-items: center;">
+                            <i class="fas fa-clock" style="width: 2.8%;"></i>
+                            <input type="text" id="batchTiming" name="batchTiming" placeholder="Enter Batch Timing" required>
+                        </div>
+                        <div class="form-group" style="display: flex; align-items: center;">
+                            <i class="fas fa-comments" style="width: 2.9%; " ></i>
+                            <textarea id="comments" name="comments" rows="3" placeholder="Enter Your Comments"></textarea>
+                        </div>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            <div class="contact-info">
+                <div class="info-box">
+                    <h3>Phone Numbers</h3>
+                    <p>+91 1234567890</p>
+                    <p>+91 9876543210</p>
+                </div>
+                <div class="info-box">
+                    <h3>Email Address</h3>
+                    <p>info@xyzdance.com</p>
+                    <p>contact@xyzdance.com</p>
+                </div>
+                <div class="info-box">
+                    <h3>Address Location</h3>
+                    <p>Expressa Dance & Fitness Studio,</p>
+                    <p>Nandini Layout, Bangalore</p>
+                </div>
+            </div>
+            
+        </section>
+
+        <section class="map-section">
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31407049.92873175!2d68.11666700000001!3d20.593684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff18cb80723%3A0x62b9a999a2e8dbb3!2sIndia!5e0!3m2!1sen!2sin!4v1721985900000!5m2!1sen!2sin"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup" id="popup">
+            
+            <div class="tab-content active" id="login">
+                <img src="../media/user.png" alt="User Image" class="user-image">
+                <h2 class="head">Login</h2>
+                <form>
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="loginEmail" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="loginPassword" placeholder="Password" required>
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+                <!-- <div class="already-account">
+                    Don't have an account? <a onclick="openTab(event, 'register')">Sign up</a>
+                </div> -->
+            </div>
+            <div class="tab-content" id="register">
+                <h2 class="head">Register</h2>
+                <form>
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="registerEmail" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="registerPassword" placeholder="Password" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="registerConfirmPassword" placeholder="Confirm Password" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" id="registerPhone" placeholder="Phone Number" required>
+                    </div>
+                    <button type="submit">Register</button>
+                </form>
+                <!-- <div class="already-account">
+                    Already registered? <a onclick="openTab(event, 'login')">Login</a>
+                </div> -->
+            </div>
+            <button class="close-button" onclick="togglePopup()">×</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section footer-about">
+                <h3>About Us</h3>
+                <ul class="about-list">
+                    <li><a href="../Template/about.html">About Us</a></li>
+                    <li><a href="../Template/classes.html">Dance Styles</a></li>
+                    <li><a href="../Template/services.html">Services</a></li>
+                    <li><a href="../Template/contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <!--  <div class="footer-section dance-styles">
+                <h3>Dance Styles</h3>
+                <ul class="dance-styles-list">
+                    <li><a href="#">Western</a></li>
+                    <li><a href="#">B-boying</a></li>
+                    <li><a href="#">Hip Hop</a></li>
+                    <li><a href="#">Bollywood</a></li>
+                    <li><a href="#">Folk</a></li>
+                </ul>
+           </div> -->
+            
+            <div class="footer-section choreography-info">
+                <h3>Choreography</h3>
+                <ul class="choreography-list">
+                    <li><a href="../Template/services.html">Weddings</a></li>
+                    <li><a href="../Template/services.html">Birthdays</a></li>
+                    <li><a href="../Template/services.html">Events</a></li>
+                    <li><a href="../Template/services.html">Ceremonies</a></li>
+                </ul>
+            </div>
+            
+            <!-- <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <ul class="quick-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div> -->
+
+            <div class="footer-section footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone-alt"></i> +91 1234567890</p>
+                <p><i class="fas fa-envelope"></i> info@xyzdance.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Expressa Dance & Fitness Studio,</p>
+                <p>Nandini  Layout, India</p> 
+                
+            </div>
+            <div class="footer-section footer-social">
+                <h3>Follow Us</h3>
+                <ul class="social-links">
+                    <li><a href="www.facebook.com"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="www.twitter.com"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="www.linkedin.com"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="www.instagram.com"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="subscribe">
+           
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Expressa Dance & Fitness Studio. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../JS/script.js"></script>
+</body>
+
+</html>
