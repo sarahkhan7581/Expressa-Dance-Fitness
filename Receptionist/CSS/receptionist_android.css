@@ -1,0 +1,150 @@
+@media screen and (max-width: 768px) {
+  .nav__logo-name {
+    color: black;
+    font-weight: 400px;
+    margin-left: 0;
+    margin-bottom: 7%;
+    font-size: 28px;
+  }
+
+  .adm {
+    padding-top: 20%;
+    font-size: 24px;
+    position: relative;
+    top: -17.5%;
+    margin-left: 8%;
+    padding-left: 10%;
+
+  }
+
+  .stud {
+    padding-top: 15%;
+    font-size: 22px;
+    position: relative;
+    top: -10.5%;
+    margin-left: 0%;
+    padding-left: 0%;
+    margin-right: 30px;
+    padding-right: 8%;
+  }
+
+  .enq {
+    font-family: serif;
+    margin: 0;
+    color: #333;
+    text-align: left;
+    font-size: 28px;
+    margin-left: 10%;
+    top: -5%;
+  }
+
+  .container1 {
+    flex-wrap: wrap;
+    width: 110%;
+    margin: 0;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #fff;
+    position: relative;
+    margin-left: 15%;
+    top: 0%;
+  }
+
+  .box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .box.primary,
+  .box.success,
+  .box.danger {
+    width: 100%;
+    margin-bottom: 20px;
+
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  body {
+    margin: calc(var(--header-height) + 1rem) 0 0 0;
+    padding-left: calc(var(--nav-width) + 2rem);
+  }
+
+  .header {
+    height: calc(var(--header-height) + 1rem);
+    padding: 0 2rem 0 calc(var(--nav-width) + 2rem);
+  }
+
+  .l-navbar {
+    left: 0;
+    padding: 1rem 1rem 0 0;
+  }
+
+  .show {
+    width: calc(var(--nav-width) + 156px);
+  }
+
+  .body-pd {
+    padding-left: calc(var(--nav-width) + 188px);
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    margin-top: 10px;
+    padding-bottom: 200px;
+  }
+
+  .container {
+    width: 150%;
+    margin-top: 10px;
+    height: auto;
+    position: relative;
+    top: auto;
+    box-shadow: none;
+    overflow: auto;
+  }
+
+  .card-body {
+    margin-right: 0;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .table-container {
+    width: 101%;
+    max-height: none;
+  }
+
+  .btn-container {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-container {
+    width: 150%;
+    margin-top: 0px;
+    height: auto;
+    position: relative;
+    top: auto;
+    box-shadow: none;
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  .custom-card-body {
+    margin-right: 0;
+    height: auto;
+    padding: 5px;
+  }
+
+  .custom-table {
+    width: 100%;
+    max-width: none;
+  }
+}

@@ -1,0 +1,896 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #4a69bd;
+    --secondary-color: #6a89cc;
+    --background-color: #f1f2f6;
+    --text-color: #2f3542;
+    --navbar-bg: #2c3e50;
+    --navbar-text: #ecf0f1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', 'sans-serif';
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    min-height: 100vh;
+    font-size: 16px;
+}
+
+
+.top-nav {
+    width: 100%;
+    height: 60px;
+    background-color: #1a1318;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.top-nav-left {
+    align-items: center;
+    margin-top: -18px;
+    margin-left: 3%;
+}
+
+.top-nav-center {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    list-style: none;
+    padding-right: 2%;
+}
+
+.top-nav-logo {
+    display: flex;
+    align-items: center;
+    margin-left: -3%;
+}
+
+.top-nav-logo-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.top-nav-center li {
+    margin-right: 3.5rem;
+}
+
+.top-nav-center a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+
+.top-nav-center a:hover {
+    color: hsl(327, 86%, 39%);
+    font-weight: bold;
+}
+
+.top-nav-center .dropdown {
+    position: relative;
+}
+
+.top-nav-center .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.top-nav-center .dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.top-nav-center .dropdown-content a:hover {
+    background-color: #333;
+}
+
+.top-nav-center .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.top-nav-center .dropbtn:after {
+    content: " ▼";
+    font-size: 0.8em;
+    vertical-align: middle;
+}
+
+/* Adjust main content to account for the new top nav */
+
+
+
+
+.navbar {
+    height: calc(100vh - 60px);
+    background-color: rgb(255, 255, 255);
+    color: rgba(0, 0, 0, 0.986);
+    padding: 2rem 1rem;
+    position: relative;
+    /* padding-right: 0rem; */
+    left: 0%;
+    top: -60px;
+    height: 562px;
+    width: 23%;
+    overflow-y: hidden;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: var(--secondary-color);
+
+}
+
+.nav-links {
+    padding-left: -8px;
+    list-style: none;
+    margin-top: -1rem;
+    padding-top: 13%;
+    position: fixed;
+    margin-left: -0.8%;
+}
+
+.nav-links li {
+    margin-bottom: 1rem;
+}
+
+.nav-links a {
+    color: black;
+    /* Changed to black */
+    text-decoration: none;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    margin-left: 40px;
+
+}
+
+.nav-links a i {
+    margin-right: 12px;
+    font-size: 1.2rem;
+    color: hsl(327, 86%, 39%);
+}
+
+.nav-links a:hover {
+    background-color: white;
+    color: hsl(327, 86%, 39%);
+    transform: translateX(5px);
+    font-weight: bold;
+
+}
+
+#navbar-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid hsl(327, 86%, 39%);
+    object-fit: cover;
+    margin: 19px 56px 1.5rem;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+}
+
+/* main {
+    margin-left: 250px;
+    padding: 3rem;
+    width: calc(100% - 250px);
+} */
+
+#fetch-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+}
+
+#fetch-inputs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 60px;
+    /* Adjust this value to match your top nav height */
+    background-color: ghostwhite;
+    padding: 10px 0;
+    z-index: 99;
+}
+
+#student-id-input {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#fetch-profile-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#profile-container {
+    height: auto;
+    overflow: visible;
+    background-color: ghostwhite;
+}
+
+.profile-layout {
+    display: flex;
+    /* Change from flex to block */
+    padding-top: 60px;
+    /* Add top padding to account for the fixed top nav */
+    background-color: ghostwhite;
+}
+
+
+main {
+    margin-left: 16px;
+    padding: 20px;
+    overflow-y: auto;
+    height: calc(104vh - 255px);
+    width: calc(100% - 280px);
+}
+
+#courses h2 {
+    margin-left: 65px;
+}
+
+/* Add any additional styles you need for other elements */
+
+section {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+section.active {
+    display: block;
+}
+
+h2 {
+    margin-bottom: 2rem;
+    margin-top: 5%;
+    color: hsl(327, 86%, 39%);
+    ;
+    font-size: 24px;
+    font-weight: 600;
+    margin-left: -172px;
+}
+
+.profile-info {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: -172px;
+}
+
+.course-info {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 68px;
+}
+
+.info-group {
+    width: calc(50% - 10px);
+    margin-bottom: 1.5rem;
+}
+
+.info-group label {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.25rem;
+}
+
+.info-group span {
+    display: block;
+    font-size: 1.1rem;
+    color: #333;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.25rem;
+}
+
+section {
+    animation: fadeIn 0.5s ease;
+}
+
+section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* courses */
+.hidden {
+    display: none;
+}
+
+section {
+    animation: fadeIn 0.5s ease;
+}
+
+section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#achievements {
+    width: 100%;
+}
+
+.achievements-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+    width: 640px;
+    margin-left: 10%;
+}
+
+.achievement-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.txt {
+    height: 80px;
+}
+
+.achievement-item:hover {
+    transform: translateY(-5px);
+}
+
+.achievement-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.achievement-item p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.achievement-image,
+.achievement-video {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.achievement-video {
+    max-height: 250px;
+    object-fit: cover;
+    height: 800px;
+}
+
+.achieve {
+    margin-left: 85px;
+    font-size: 24px;
+    margin-bottom: 0px;
+}
+
+/* Competiton section */
+
+.competitions-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+    width: 640px;
+    margin-left: 10%;
+}
+
+.competition-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.competition-item:hover {
+    transform: translateY(-5px);
+}
+
+.competition-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.competition-item p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.competition-image,
+.competition-video {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.competition-video {
+    max-height: 250px;
+}
+
+.compete {
+    margin-left: 85px;
+    font-size: 24px;
+    margin-bottom: 0px;
+}
+
+.add-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: hsl(327, 86%, 39%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+
+}
+
+.add-btn:hover {
+    color: hsl(327, 86%, 39%);
+    background-color: white;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: -8px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+form input[type="text"],
+form input[type="file"],
+form button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+form button {
+    background-color: hsl(327, 86%, 39%);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: hsl(327, 86%, 39%);
+}
+
+/* Specific Classes */
+.competitions-container .item,
+.achievements-container .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.competitions-container .item h3,
+.achievements-container .item h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.competitions-container .item p,
+.achievements-container .item p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.competitions-container .item img,
+.achievements-container .item img,
+.competitions-container .item video,
+.achievements-container .item video {
+    margin-top: 10px;
+}
+
+
+.brand-info {
+    text-align: center;
+    margin-left: 45%;
+    text-decoration: none;
+}
+
+
+
+
+.brand-info h1 {
+    font-size: 24px;
+    margin: 0;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    /* Optional: Makes the text uppercase */
+}
+
+.brand-info h1:hover {
+    color: hsl(327, 86%, 39%);
+}
+
+.brand-info p:hover {
+    color: hsl(327, 86%, 39%);
+}
+
+
+.brand-info p {
+    font-size: 16px;
+    margin: 0;
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+}
+
+.edit-profile-btn,
+.edit-photo-btn {
+    padding: 10px 15px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Edit Profile button styles */
+.edit-profile-btn {
+    background-color: #aa1564;
+    color: white;
+}
+
+.edit-profile-btn:hover {
+    background-color: #aa1563;
+}
+
+/* Edit Photo button styles */
+.edit-photo-btn {
+    background-color: #aa1564;
+    color: white;
+}
+
+.edit-photo-btn:hover {
+    background-color: #aa1563;
+}
+
+/* Style for the buttons when in edit mode */
+.edit-profile-btn.editing,
+.edit-photo-btn.editing {
+    background-color: #aa1563(327, 86%, 39%);
+}
+
+.edit-profile-btn.editing:hover,
+.edit-photo-btn.editing:hover {
+    background-color: #aa1563(327, 86%, 39%);
+}
+
+/* Positioning for the buttons */
+#profile {
+    position: relative;
+    margin-left: 30%;
+    margin-top: 3%;
+}
+
+.edit-profile-btn,
+.edit-photo-btn {
+    position: absolute;
+    top: -17px;
+
+}
+
+
+.edit-profile-btn {
+    right: 130px;
+    /* Adjust as needed */
+}
+
+.edit-photo-btn {
+    right: -3px;
+}
+
+/* Styles for the edit input fields */
+.edit-input {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+
+    font-size: 1.1rem;
+}
+
+/* Edit Button for course */
+.edit-course-btn {
+    padding: 10px 15px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #aa1564;
+    color: white;
+    position: absolute;
+    top: -16px;
+    right: 10px;
+}
+
+.edit-course-btn:hover {
+    background-color: #aa1563;
+}
+
+.edit-course-btn.editing {
+    background-color: #aa1563;
+}
+
+.edit-course-btn.editing:hover {
+    background-color: #aa1563;
+}
+
+#courses {
+    position: relative;
+}
+
+/* Existing and New Photos/Videos/text Editing - Achievements*/
+.edit-achievements-btn,
+.add-achievement-btn,
+.delete-achievement-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+    color: white;
+}
+
+.edit-achievements-btn,
+.add-achievement-btn,
+.delete-achievement-btn {
+    background-color: #aa1564;
+}
+
+.edit-media-btn {
+    padding: 10px 15px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #aa1564;
+    color: white;
+}
+
+.edit-achievements-btn:hover,
+.add-achievement-btn:hover,
+.delete-achievement-btn:hover {
+    opacity: 0.9;
+}
+
+
+.edit-achievements-btn.editing {
+    background-color: #aa1563;
+}
+
+.editable {
+    border: 1px dashed #aa1564;
+    padding: 5px;
+}
+
+.edit-media-btn {
+    margin-top: 10px;
+}
+
+
+.achievement-buttons {
+    display: flex;
+    justify-content: center;
+    /* Center the buttons horizontally */
+    align-items: center;
+    /* Center the buttons vertically if needed */
+    position: relative;
+    /* Ensure the container is positioned relative */
+    margin-left: -13px;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.add-achievement-btn[style*="display: none"],
+.delete-achievement-btn[style*="display: none"] {
+    position: absolute;
+    /* Remove them from the normal flow */
+    visibility: hidden;
+    /* Ensure they do not take up space */
+}
+
+/* Existing and New Photos/Videos/text Editing */
+#competitions {
+    width: 100%;
+}
+
+.competition-buttons {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-left: 606px;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+
+
+.add-competition-btn[style*="display: none"],
+.delete-competition-btn[style*="display: none"] {
+    position: absolute;
+    /* Remove them from the normal flow */
+    visibility: hidden;
+    /* Ensure they do not take up space */
+}
+
+
+.edit-competitions-btn,
+.add-competition-btn,
+.delete-competition-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+    color: white;
+}
+
+.edit-competitions-btn {
+    background-color: #aa1564;
+    margin-left: -187%;
+}
+
+.add-competition-btn {
+    background-color: #aa1564;
+}
+
+.delete-competition-btn {
+    background-color: #aa1564;
+}
+
+.edit-competitions-btn:hover,
+.add-competition-btn:hover,
+.delete-competition-btn:hover {
+    opacity: 0.9;
+}
+
+.edit-competitions-btn.editing {
+    background-color: #aa1563;
+}
